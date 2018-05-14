@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Install Xcode Command-Line Tools
-if ! xcode-select -p ; then
-    xcode-select --install
-    exit 0
-fi
-
 #Install brew
 if which brew > /dev/null;
 then
@@ -13,24 +7,29 @@ then
 else ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo "Installing some brew things..."
-#Install some brew things
+echo "Setting up brew to install programs..."
 brew tap caskroom/cask
+brew update
+
+echo "Installing brew modules"
 brew install git nodejs ruby cask zsh wget python3 chromedriver htop wakeonlan parallel
 
+echo "Installing brew taps"
 brew tap railwaycat/emacsmacport
-brew update
+
 #brew install emacs-mac
-echo "Installing some casks..."
+echo "Installing brew casks..."
 #Install some casks
 brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java sourcetree viscosity
 
+echo "Installing Intellij"
 brew cask install caskroom/cask/intellij-idea-ce
 
 echo "Installing maven"
 #maven requires java so needed to install that first
 brew install maven
 
+echo "Installing purecloud"
 wget https://dhqbrvplips7x.cloudfront.net/directory-mac/322/purecloud-mac-1.11.342.pkg
 sudo installer -pkg ~/Downloads/purecloud-mac* -target /
 
@@ -49,4 +48,10 @@ then
   chsh -s $(which zsh)
 else
   echo "Zsh is not installed. Go do that and then install oh-my-zsh"
+fi
+
+# Install Xcode Command-Line Tools
+if ! xcode-select -p ; then
+    xcode-select --install
+    exit 0
 fi

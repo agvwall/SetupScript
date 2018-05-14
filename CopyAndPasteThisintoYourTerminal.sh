@@ -1,13 +1,15 @@
-#!/bin/bash
-
+#Copy/paste this line into a terminal first, it will download homebrew and install it. 
+#You'll have to follow the prompts given by the install script
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+
+#Then you can copy/paste the rest of these commands into your terminal
 brew install git
 
 git clone https://github.com/agvwall/SetupScript
 
-chmod +X SetupScript/SecondScript
-
 cd SecondScript
+
+chmod +x SecondScript
 
 ./SecondScript
