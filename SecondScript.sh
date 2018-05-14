@@ -20,7 +20,7 @@ brew tap railwaycat/emacsmacport
 #brew install emacs-mac
 echo "Installing brew casks..."
 #Install some casks
-brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java sourcetree viscosity chromedriver
+brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java sourcetree viscosity chromedriver wget
 
 echo "Installing Intellij"
 brew cask install caskroom/cask/intellij-idea-ce
@@ -30,11 +30,13 @@ echo "Installing maven"
 brew install maven
 
 echo "Installing purecloud"
-wget https://dhqbrvplips7x.cloudfront.net/directory-mac/322/purecloud-mac-1.11.342.pkg
+wget https://dhqbrvplips7x.cloudfront.net/directory-mac/322/purecloud-mac-1.11.342.pkg -O ~/Downloads
 sudo installer -pkg ~/Downloads/purecloud-mac* -target /
 
 #setup ssh key
 echo "Lets setup an ssh key"
+echo "~~~~Use the default location provided for the ssh key~~~~"
+echo "~~~~Use an empty passphrase for the sshe key~~~~"
 ssh-keygen -t rsa
 
 echo "Time to install oh-my-zsh"
