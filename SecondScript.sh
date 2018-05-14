@@ -12,7 +12,7 @@ brew tap caskroom/cask
 brew update
 
 echo "Installing brew modules"
-brew install git nodejs ruby cask zsh wget python3 chromedriver htop wakeonlan parallel
+brew install git nodejs ruby cask zsh wget python3 htop wakeonlan parallel
 
 echo "Installing brew taps"
 brew tap railwaycat/emacsmacport
@@ -20,7 +20,7 @@ brew tap railwaycat/emacsmacport
 #brew install emacs-mac
 echo "Installing brew casks..."
 #Install some casks
-brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java sourcetree viscosity
+brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java sourcetree viscosity chromedriver
 
 echo "Installing Intellij"
 brew cask install caskroom/cask/intellij-idea-ce
