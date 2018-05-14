@@ -2,7 +2,6 @@
 #You'll have to follow the prompts given by the install script
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
 #Then you can copy/paste the rest of these commands into your terminal
 brew install git
 
