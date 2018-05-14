@@ -30,7 +30,7 @@ echo "Installing maven"
 brew install maven
 
 echo "Installing purecloud"
-wget https://dhqbrvplips7x.cloudfront.net/directory-mac/322/purecloud-mac-1.11.342.pkg -O ~/Downloads
+wget https://dhqbrvplips7x.cloudfront.net/directory-mac/322/purecloud-mac-1.11.342.pkg -P ~/Downloads/
 sudo installer -pkg ~/Downloads/purecloud-mac* -target /
 
 #setup ssh key
